@@ -1,0 +1,30 @@
+.skeleton-random-movie {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    margin-bottom: 64px;
+  }
+  
+  .skeleton-poster {
+    position: relative;
+    aspect-ratio: 2/3; /* Соотношение как у постера */
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  
+  .skeleton-details {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+  }
+  
+  .skeleton-meta {
+    display: flex;
+    margin-top: 32px;
+  }
+  
+  .skeleton-actions {
+    display: flex;
+    margin-top: 40px;
+  }
+  

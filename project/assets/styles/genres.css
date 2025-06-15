@@ -1,0 +1,119 @@
+.genres-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+.page-title {
+  margin: 24px 0;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  color: #fff;
+}
+.genres-list {
+  margin-bottom: 64px;
+}
+.genres-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 40px;
+  padding-bottom: 24px;
+}
+.genre-item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 304px;
+  width: 290px;
+  background: none;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.genre-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+.genre-title {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  padding: 10%;
+  text-align: center;
+  background: rgba(0,0,0,1);
+  font-size: var(--font-size-h1);
+  font-weight: bold;
+}
+.genre-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 73%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 20;
+}
+.genre-image img {
+  height: 70%;
+  overflow-clip-margin: 100%;
+}
+.genre-header {
+  display: flex;
+  max-height: 184px;
+  align-items: center;
+  margin: 24px 0;
+  padding-bottom: 16px;
+}
+.back-button {
+  display: flex;
+  width: 5%;
+  padding: 8px 12px;
+  align-items: center;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.back-button:hover {
+  background: none;
+}
+.back-button svg {
+  fill: var(--text-color);
+  transition: color 0.2s ease;
+}
+.back-button svg:hover {
+  fill: var(--menu-color-hover);
+}
+.loading-state {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+}
+.movies-by-genre .genre-title {
+  background-color: inherit;
+  color: var(--text-color);
+  max-height: 184px;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+@media (max-width: 1000px) {
+  .genres-container { padding: 0 40px; }
+  .genres-grid { gap: 24px; }
+}
+
+@media (max-width: 750px) {
+  .genres-grid { grid-template-columns: repeat(2, 1fr); }
+  .genre-item { width: 100%; }
+}
+
+@media (max-width: 500px) {
+  .genres-container { padding: 0 16px; }
+  .genres-grid { grid-template-columns: 1fr; }
+  .genre-title { font-size: 1.2rem; }
+}

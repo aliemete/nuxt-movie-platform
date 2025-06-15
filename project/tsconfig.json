@@ -1,0 +1,12 @@
+{
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "types": ["jest", "node"],
+    "module": "ESNext",
+    "esModuleInterop": true,
+    "paths": {
+      "#imports": ["./.nuxt/imports.d.ts"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.vue", "**/*.spec.ts", "../../fetch.ts_work"]
+}

@@ -1,0 +1,187 @@
+/* @import '~/assets/styles/header.css';
+@import '~/assets/styles/search.css';
+@import '~/assets/styles/auth.css';
+@import '~/assets/styles/account.css';
+@import '~/assets/styles/movie.css';
+@import '~/assets/styles/moviegrid.css';
+@import '~/assets/styles/genres.css';
+@import '~/assets/styles/trailer.css';
+@import '~/assets/styles/skeletons.css'; */
+
+@import './header.css';
+@import './search.css';
+@import './auth.css';
+@import './account.css';
+@import './movie.css';
+@import './moviegrid.css';
+@import './genres.css';
+@import './trailer.css';
+@import './skeletons.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet');
+
+:root {
+    --background-color: linear-gradient(178.733deg, rgba(39, 135, 245, 18%) 0%, rgba(163, 147, 245, 18%) 100%), linear-gradient(180deg, #000000 0%, rgba(39, 36, 36, 70%) 100%);
+    --text-color: rgba(255, 255, 255, 1);
+    --text-badge: rgba(106, 93, 194, 1);
+    --text-spec-color: rgba(255, 255, 255, 0.7);
+    --menu-color-hover: rgba(180, 169, 255, 1);
+    --border-menu-hover:  rgba(220, 93, 252, 1);
+    --btn-hover-background: rgba(103, 165, 235, 1);
+    --btn-color: rgba(51, 51, 51, 1);
+    --back-color: rgba(57, 59, 60, 1);
+    --raiting-top-color: rgba(165, 148, 0, 1);
+    --raiting-middle-color: rgba(48, 142, 33, 1);
+    --raiting-low-color: rgba(119, 119, 119, 1);
+    --raiting: rgba(48, 142, 33, 1);
+    --error-border: rgba(255, 117, 117, 1);
+    --hover-search-border: rgba(255, 255, 255, 0.5);
+    --font-play: 'Play', sans-serif;
+    --font-size-h1: 24px;
+    --font-size-h2: 18px;
+    --font-size-text: 14px;
+}
+ /* Общие стили */
+ body {
+    display: flex;
+    width: 1440px;
+    min-height: 100vh;
+    margin: 0 auto;
+    flex-direction: column;
+
+    font-family: var(--font-play);
+    font-size: var(--font-size-h1);
+    line-height: 32px;
+    background: var(--background-color);
+    color: var(--text-color);
+  }
+  a {
+    text-decoration: none;
+    color: var(--text-color);
+    cursor: pointer;
+  }  
+  button {
+    display: inline-flex;
+    width: 171px;
+    height: 56px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: var(--btn-color);
+    border: none;
+    border-radius: 28px;
+    color: var(--text-color);
+    font-family: 'Play', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 32px;
+    cursor: pointer;
+
+    &:hover {
+      background: var(--btn-hover-background);
+    }
+
+    &:active {
+
+    }
+  }
+
+  /* Main */
+  .main-content, .movie-page {
+    position: relative;
+    max-width: 1440px;
+    padding: 32px 80px;
+    z-index: 1;
+  }
+
+
+/* Errors */
+.error-message {
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 8px;
+  color: var(--error-border);
+  text-align: center;
+  font-size: 16px;
+}
+
+.empty-message {
+  text-align: center;
+  padding: 3rem 0;
+  color: #666;
+}
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  bottom: 0;
+  right: 0;
+  max-width: 1440px;
+  height: 69px;
+  margin: 0 80px;
+}
+
+.error-icon {
+  fill: var(--error-border);
+}
+
+.error-input {
+  border-color: var(--error-border);
+}
+
+/* Скелетоны */
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.3s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+@media (max-width: 1440px) {
+  body { width: 100%; max-width: 1440px; }
+  .main-content { padding: 24px 40px; }
+}
+
+@media (max-width: 1200px) {
+  .movie-title {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  
+  .movie-poster {
+    min-width: 45%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .movie-content-top {
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  .movie-poster {
+    max-height: 480px;
+    min-width: 100%;
+  }
+  
+  .movie-title {
+    font-size: 36px;
+  }
+  
+  .detail-label-container {
+    width: 260px;
+  }
+}
+
+@media (max-width: 750px) {
+  .main-content { padding: 16px; }
+  .movie-title { font-size: 32px; }
+}
+
+@media (max-width: 500px) {
+  button { 
+    width: 100%;
+    height: 48px;
+    font-size: 16px;
+  }
+}

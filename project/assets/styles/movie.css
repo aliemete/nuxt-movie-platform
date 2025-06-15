@@ -1,0 +1,118 @@
+/* Movie */
+.movie-card {
+    background: none;
+    border-radius: 12px;
+    overflow: hidden;
+    color: white;
+  }
+  .movie-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 100vw;
+    overflow: hidden;
+  }
+  .movie-content-top {
+    display: flex;
+  }
+  .movie-info {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    gap: 16px;
+  }
+  .movie-details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .movie-about {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-right: 16px;
+    gap: 16px;
+  }
+  .movie-title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+    gap: 16px;
+  }
+  .movie-descr {
+    width: 100%;    
+    line-height: 32px;
+    color: var(--text-spec-color);
+  }
+  .movie-buttons {
+    display: flex;
+    width: 100%;
+    margin-top: 35px;
+    gap: 16px;
+  }
+  .movie-poster {
+    min-width: 50%;
+    max-height: 552px;
+  }
+  .poster-image {
+    border-radius: 16px;
+  }
+  .movie-trailer-btn, .button-about-card  {
+
+  }
+  .button-to-favorites, .button-reload {
+    width: 68px;
+  }
+/* Movie-about */
+
+.movie-more-details {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 120px;
+  /* padding: 40px 80px; */
+}
+.more-details-h1 {
+  margin: 40px 0 40px 0;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 56px;
+  gap: 16px;
+}
+.detail-items {
+  gap: 24px;
+  line-height: 24px;
+  font-size: var(--font-size-h2);
+}
+.detail-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: baseline;
+  gap: 8px;
+}
+.detail-dots {
+  background: radial-gradient(circle at center, 
+    currentColor 18%, 
+    transparent 16%) 
+    0 0 / 6px 1.5px repeat-x;
+  height: 1em;
+  opacity: 0.6;
+}
+.detail-label-container {
+  display: flex;
+  position: relative;
+  width: 320px;
+  align-items: baseline;
+}
+.detail-label {
+  white-space: nowrap;
+  padding-right: 8px;
+  flex-shrink: 0;
+}
+.detail-dots {
+  flex: 1;
+  background-position: left bottom;
+}
+.detail-value {
+  white-space: nowrap;
+  padding-left: 8px;
+}
